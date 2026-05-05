@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"
+     font-family="-apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <!-- =================== Defs =================== -->
+  <defs>
+    <!-- arrow marker (dark) -->
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+
+    <!-- Card fills -->
+    <linearGradient id="userBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafafa"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+    <linearGradient id="ifBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fde2cc"/>
+      <stop offset="100%" stop-color="#f6c8a3"/>
+    </linearGradient>
+    <linearGradient id="agentBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f3a36a"/>
+      <stop offset="100%" stop-color="#df7e3c"/>
+    </linearGradient>
+    <linearGradient id="permBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff1b8"/>
+      <stop offset="100%" stop-color="#ffe17a"/>
+    </linearGradient>
+    <linearGradient id="toolBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#d8e8ff"/>
+      <stop offset="100%" stop-color="#b6d2ff"/>
+    </linearGradient>
+    <linearGradient id="envBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#efefef"/>
+      <stop offset="100%" stop-color="#d8d8d8"/>
+    </linearGradient>
+    <linearGradient id="stateBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#d6f0d2"/>
+      <stop offset="100%" stop-color="#a9dca0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- =================== Background =================== -->
+  <rect width="1200" height="600" fill="#ffffff"/>
+
+  <!-- =================== Permission System (TOP center-right) =================== -->
+  <g>
+    <rect x="540" y="40" width="280" height="100" rx="22"
+          fill="url(#permBg)" stroke="#c9a300" stroke-width="2.5"/>
+    <text x="600" y="88" font-size="26" font-weight="800" fill="#222">Permission</text>
+    <text x="600" y="120" font-size="26" font-weight="800" fill="#222">System</text>
+    <!-- check icon -->
+    <g transform="translate(760, 70)" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="2,22 18,38 44,8"/>
+    </g>
+  </g>
+
+  <!-- =================== User =================== -->
+  <g>
+    <rect x="50" y="240" width="120" height="80" rx="10"
+          fill="url(#userBg)" stroke="#222" stroke-width="2.2"/>
+    <text x="110" y="266" text-anchor="middle" font-size="18" font-weight="800" fill="#111">User</text>
+    <!-- person icon (filled) -->
+    <g transform="translate(86, 274)" fill="#111">
+      <circle cx="24" cy="10" r="9"/>
+      <path d="M2,42 q0,-18 22,-18 t22,18 v4 h-44 z"/>
+    </g>
+  </g>
+
+  <!-- =================== Interfaces =================== -->
+  <g>
+    <rect x="270" y="220" width="180" height="120" rx="22"
+          fill="url(#ifBg)" stroke="#c9763a" stroke-width="2.5"/>
+    <text x="360" y="282" text-anchor="middle" font-size="24" font-weight="800" fill="#222">Interfaces</text>
+    <!-- code window icon -->
+    <g transform="translate(298, 296)" stroke="#222" stroke-width="2.4" fill="none" stroke-linejoin="round">
+      <rect x="0" y="0" width="124" height="34" rx="5"/>
+      <line x1="0" y1="9" x2="124" y2="9"/>
+      <circle cx="8" cy="4.5" r="1.6" fill="#222" stroke="none"/>
+      <circle cx="16" cy="4.5" r="1.6" fill="#222" stroke="none"/>
+      <circle cx="24" cy="4.5" r="1.6" fill="#222" stroke="none"/>
+      <text x="62" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#222" stroke="none">&lt;/&gt;</text>
+    </g>
+  </g>
+
+  <!-- =================== Agent Loop =================== -->
+  <g>
+    <rect x="540" y="220" width="220" height="140" rx="22"
+          fill="url(#agentBg)" stroke="#a64f17" stroke-width="2.5"/>
+    <text x="610" y="288" text-anchor="middle" font-size="26" font-weight="800" fill="#1c1c1c">Agent</text>
+    <text x="610" y="318" text-anchor="middle" font-size="26" font-weight="800" fill="#1c1c1c">Loop</text>
+    <!-- circular arrows icon -->
+    <g transform="translate(686, 268)" fill="none" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round">
+      <path d="M30,18 a18,18 0 1 0 -10,28" />
+      <polyline points="22,38 20,46 30,46"/>
+      <path d="M10,46 a18,18 0 1 0 10,-28"/>
+      <polyline points="20,18 22,10 12,10"/>
+    </g>
+  </g>
+
+  <!-- =================== Tools =================== -->
+  <g>
+    <rect x="850" y="240" width="160" height="100" rx="22"
+          fill="url(#toolBg)" stroke="#3a72c4" stroke-width="2.5"/>
+    <text x="930" y="298" text-anchor="middle" font-size="26" font-weight="800" fill="#222">Tools</text>
+    <!-- crossed hammers -->
+    <g transform="translate(896, 252)" stroke="#222" stroke-width="2.6" fill="#222" stroke-linejoin="round">
+      <g transform="rotate(-30 18 18)">
+        <rect x="6" y="6" width="22" height="9" rx="2"/>
+        <line x1="14" y1="14" x2="32" y2="32" stroke-width="3"/>
+      </g>
+      <g transform="rotate(30 18 18)">
+        <rect x="6" y="6" width="22" height="9" rx="2"/>
+        <line x1="14" y1="14" x2="32" y2="32" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- =================== Execution Environment =================== -->
+  <g>
+    <rect x="1040" y="220" width="150" height="140" rx="22"
+          fill="url(#envBg)" stroke="#777" stroke-width="2.5"/>
+    <text x="1115" y="266" text-anchor="middle" font-size="18" font-weight="800" fill="#222">Execution</text>
+    <text x="1115" y="288" text-anchor="middle" font-size="18" font-weight="800" fill="#222">Environment</text>
+    <!-- box icon -->
+    <g transform="translate(1078, 298)" stroke="#222" stroke-width="2.6" fill="none" stroke-linejoin="round">
+      <polygon points="36,6 66,18 66,46 36,58 6,46 6,18"/>
+      <line x1="6"  y1="18" x2="36" y2="30"/>
+      <line x1="66" y1="18" x2="36" y2="30"/>
+      <line x1="36" y1="30" x2="36" y2="58"/>
+    </g>
+    <text x="1115" y="380" text-anchor="middle" font-size="13" fill="#333">Files / Shell / Web / MCP</text>
+  </g>
+
+  <!-- =================== State & Persistence =================== -->
+  <g>
+    <rect x="540" y="450" width="220" height="110" rx="22"
+          fill="url(#stateBg)" stroke="#3d8033" stroke-width="2.5"/>
+    <text x="618" y="498" text-anchor="middle" font-size="22" font-weight="800" fill="#1c2b1c">State &amp;</text>
+    <text x="618" y="528" text-anchor="middle" font-size="22" font-weight="800" fill="#1c2b1c">Persistence</text>
+    <!-- database icon -->
+    <g transform="translate(696, 478)" fill="#1c2b1c">
+      <ellipse cx="22" cy="8"  rx="22" ry="7"/>
+      <path d="M0,8 v12 a22,7 0 0 0 44,0 v-12 a22,7 0 0 1 -44,0 z"/>
+      <path d="M0,22 v12 a22,7 0 0 0 44,0 v-12 a22,7 0 0 1 -44,0 z"/>
+    </g>
+  </g>
+
+  <!-- =================== Connectors =================== -->
+  <!-- User -> Interfaces -->
+  <line x1="172" y1="280" x2="266" y2="280" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="219" y="266" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Prompt</text>
+  <text x="219" y="304" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Command/Task</text>
+
+  <!-- Interfaces -> Agent Loop (Request) -->
+  <line x1="452" y1="262" x2="536" y2="262" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="494" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Request</text>
+  <!-- Agent Loop -> Interfaces (Progress) -->
+  <line x1="538" y1="316" x2="454" y2="316" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="496" y="334" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Progress</text>
+
+  <!-- Agent Loop -> Permission System (Propose Action) -->
+  <line x1="616" y1="218" x2="616" y2="142" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="616" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Propose Action</text>
+
+  <!-- Permission System -> Tools (Allow/Ask/Deny) -->
+  <path d="M780,142 C 780,180 850,200 870,238" stroke="#222" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+  <text x="846" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Allow/Ask/Deny</text>
+
+  <!-- Agent Loop -> Tools  (forward) -->
+  <line x1="762" y1="270" x2="848" y2="270" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <!-- Tools -> Agent Loop (Tool Result) -->
+  <line x1="848" y1="310" x2="762" y2="310" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="805" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Tool Result</text>
+
+  <!-- Tools -> Execution Environment (forward) -->
+  <line x1="1012" y1="280" x2="1038" y2="280" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <!-- Execution Environment -> Tools (back) -->
+  <line x1="1038" y1="310" x2="1012" y2="310" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+
+  <!-- Agent Loop -> State (Persist), State -> Agent Loop (Load) -->
+  <line x1="640" y1="362" x2="640" y2="448" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="666" y="408" font-size="14" font-weight="700" fill="#222">Persist</text>
+  <line x1="690" y1="448" x2="690" y2="362" stroke="#222" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="722" y="408" font-size="14" font-weight="700" fill="#222">Load</text>
+
+  <!-- =================== Footer =================== -->
+  <text x="600" y="585" text-anchor="middle" font-size="12" fill="#777" font-style="italic">
+    Main structure — User loop through Interfaces, gated by Permission System, executes via Tools in Execution Environment, persisted by State
+  </text>
+</svg>

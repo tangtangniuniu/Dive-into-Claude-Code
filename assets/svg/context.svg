@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="-apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <!-- =============== Defs =============== -->
+  <defs>
+    <!-- arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7a7a7a"/>
+    </marker>
+    <marker id="arrowDown" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,0 L5,10 z" fill="#7a7a7a"/>
+    </marker>
+
+    <!-- Layer gradient fills -->
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4d4878"/>
+      <stop offset="100%" stop-color="#3a3560"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a8a8a"/>
+      <stop offset="100%" stop-color="#487070"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6f8a5e"/>
+      <stop offset="100%" stop-color="#566f48"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9e9258"/>
+      <stop offset="100%" stop-color="#7e7445"/>
+    </linearGradient>
+    <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a55a52"/>
+      <stop offset="100%" stop-color="#8a463f"/>
+    </linearGradient>
+    <linearGradient id="g6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7e6190"/>
+      <stop offset="100%" stop-color="#634a73"/>
+    </linearGradient>
+
+    <!-- subtle bg for context-window box -->
+    <linearGradient id="cwBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafafa"/>
+      <stop offset="100%" stop-color="#f0f0f3"/>
+    </linearGradient>
+
+    <!-- Claude burst -->
+    <radialGradient id="claudeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd2a8"/>
+      <stop offset="60%" stop-color="#e8723b"/>
+      <stop offset="100%" stop-color="#c8541f"/>
+    </radialGradient>
+  </defs>
+
+  <!-- =============== Background =============== -->
+  <rect width="1200" height="780" fill="#ffffff"/>
+
+  <!-- =============== Left ACCESS column =============== -->
+  <text x="120" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#222" letter-spacing="2">ACCESS</text>
+
+  <!-- pill helper: each item -->
+  <g font-size="15" font-weight="600" fill="#3a3a3a">
+    <g>
+      <rect x="40" y="76" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="113" text-anchor="middle">Read-only</text>
+    </g>
+    <g>
+      <rect x="40" y="166" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="203" text-anchor="middle">Hot-reload</text>
+    </g>
+    <g>
+      <rect x="40" y="256" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="293" text-anchor="middle">Sys-write</text>
+    </g>
+    <g>
+      <rect x="40" y="346" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="383" text-anchor="middle">Append</text>
+    </g>
+    <g>
+      <rect x="40" y="436" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="473" text-anchor="middle">Model-trigger</text>
+    </g>
+    <g>
+      <rect x="40" y="526" width="160" height="60" rx="10" fill="#f4f0e6" stroke="#d6cdb4"/>
+      <text x="120" y="563" text-anchor="middle">Lazy-load</text>
+    </g>
+  </g>
+
+  <!-- ACCESS Mutability arrow (downward) -->
+  <text x="120" y="615" text-anchor="middle" font-size="14" font-weight="700" fill="#222" letter-spacing="1">ACCESS</text>
+  <text x="120" y="635" text-anchor="middle" font-size="13" fill="#444">Mutability increases</text>
+  <line x1="120" y1="650" x2="120" y2="700" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- =============== Context Window box =============== -->
+  <rect x="240" y="60" width="660" height="600" rx="16"
+        fill="url(#cwBg)" stroke="#3a3560" stroke-width="2.2" stroke-dasharray="6 4"/>
+  <text x="570" y="50" text-anchor="middle" font-size="20" font-weight="700" fill="#222">Context Window</text>
+
+  <!-- ====== Layer 1: System Layer ====== -->
+  <g>
+    <rect x="260" y="80" width="620" height="78" rx="12" fill="url(#g1)"/>
+    <text x="278" y="106" font-size="16" font-weight="700" fill="#fff">(1) System Layer</text>
+    <text x="412" y="106" font-size="13" font-style="italic" fill="#e3def0">[startup]</text>
+    <!-- inner pills -->
+    <g font-size="12.5" fill="#2a274a" font-weight="600">
+      <rect x="278" y="118" width="140" height="28" rx="6" fill="#cfc6e8"/>
+      <text x="348" y="137" text-anchor="middle">System Prompt</text>
+      <rect x="430" y="118" width="160" height="28" rx="6" fill="#cfc6e8"/>
+      <text x="510" y="137" text-anchor="middle">Environment Info</text>
+      <rect x="602" y="118" width="140" height="28" rx="6" fill="#cfc6e8"/>
+      <text x="672" y="137" text-anchor="middle">Output Styles</text>
+      <rect x="754" y="118" width="120" height="28" rx="6" fill="#cfc6e8"/>
+      <text x="814" y="137" text-anchor="middle" font-size="11">Skill Desc.</text>
+      <rect x="278" y="86" width="0" height="0" fill="none"/>
+    </g>
+    <!-- second row -->
+    <g font-size="12.5" fill="#2a274a" font-weight="600">
+      <!-- shift second row inside layer? we'll keep one row for compactness -->
+    </g>
+  </g>
+  <!-- second row pills for layer 1: place lower if needed -->
+  <g font-size="12" fill="#2a274a" font-weight="600">
+    <!-- MCP tool names is referenced in image; we keep it as a small note -->
+    <text x="278" y="155" font-size="11" fill="#e3def0" font-style="italic">+ MCP Tool Names</text>
+  </g>
+
+  <!-- ====== Layer 2: Project Config ====== -->
+  <g>
+    <rect x="260" y="174" width="620" height="86" rx="12" fill="url(#g2)"/>
+    <text x="278" y="200" font-size="16" font-weight="700" fill="#fff">(2) Project Config</text>
+    <text x="430" y="200" font-size="13" font-style="italic" fill="#dfeeee">[startup or lazy]</text>
+    <g font-size="12.5" fill="#1f3838" font-weight="600">
+      <rect x="278" y="212" width="220" height="28" rx="6" fill="#c8dede"/>
+      <text x="388" y="231" text-anchor="middle">CLAUDE.md Hierarchy (5 levels)</text>
+      <rect x="510" y="212" width="240" height="28" rx="6" fill="#c8dede"/>
+      <text x="630" y="231" text-anchor="middle">Path-scoped Rules (claude/rules/*)</text>
+    </g>
+    <text x="278" y="252" font-size="11" fill="#eef7f7" font-style="italic">
+      Managed → OS → Project → .claude/ → local → directory-specific | start up
+    </text>
+  </g>
+
+  <!-- ====== Layer 3: Memory ====== -->
+  <g>
+    <rect x="260" y="276" width="620" height="68" rx="12" fill="url(#g3)"/>
+    <text x="278" y="302" font-size="16" font-weight="700" fill="#fff">(3) Memory</text>
+    <text x="372" y="302" font-size="13" font-style="italic" fill="#e1ebd6">[startup]</text>
+    <g font-size="12.5" fill="#2b3a1e" font-weight="600">
+      <rect x="278" y="312" width="140" height="24" rx="6" fill="#d9e3c9"/>
+      <text x="348" y="328" text-anchor="middle">Auto Memory</text>
+      <rect x="430" y="312" width="160" height="24" rx="6" fill="#d9e3c9"/>
+      <text x="510" y="328" text-anchor="middle">Compact Summary</text>
+      <text x="610" y="328" font-size="11" font-style="italic" fill="#eef4e3">(Replaces long history)</text>
+    </g>
+  </g>
+
+  <!-- ====== Layer 4: Conversation ====== -->
+  <g>
+    <rect x="260" y="360" width="620" height="68" rx="12" fill="url(#g4)"/>
+    <text x="278" y="386" font-size="16" font-weight="700" fill="#fff">(4) Conversation</text>
+    <text x="412" y="386" font-size="13" font-style="italic" fill="#f4eed5">[carry forward]</text>
+    <g font-size="12.5" fill="#3a3414" font-weight="600">
+      <rect x="278" y="396" width="180" height="24" rx="6" fill="#ece4be"/>
+      <text x="368" y="412" text-anchor="middle">Conversation History</text>
+      <rect x="470" y="396" width="180" height="24" rx="6" fill="#ece4be"/>
+      <text x="560" y="412" text-anchor="middle">Subagent Summaries</text>
+    </g>
+  </g>
+
+  <!-- ====== Layer 5: Runtime ====== -->
+  <g>
+    <rect x="260" y="444" width="620" height="68" rx="12" fill="url(#g5)"/>
+    <text x="278" y="470" font-size="16" font-weight="700" fill="#fff">(5) Runtime</text>
+    <text x="362" y="470" font-size="13" font-style="italic" fill="#f4dad5">[carry forward]</text>
+    <g font-size="12.5" fill="#3e1a14" font-weight="600">
+      <rect x="278" y="480" width="120" height="24" rx="6" fill="#eccac3"/>
+      <text x="338" y="496" text-anchor="middle">Read Files</text>
+      <rect x="410" y="480" width="160" height="24" rx="6" fill="#eccac3"/>
+      <text x="490" y="496" text-anchor="middle">Command Outputs</text>
+      <rect x="582" y="480" width="120" height="24" rx="6" fill="#eccac3"/>
+      <text x="642" y="496" text-anchor="middle">Tool Results</text>
+    </g>
+  </g>
+
+  <!-- ====== Layer 6: On-Demand ====== -->
+  <g>
+    <rect x="260" y="528" width="620" height="74" rx="12" fill="url(#g6)"/>
+    <text x="278" y="554" font-size="16" font-weight="700" fill="#fff">(6) On-Demand</text>
+    <text x="380" y="554" font-size="13" font-style="italic" fill="#ece1f0">[lazy]</text>
+    <g font-size="12.5" fill="#34204a" font-weight="600">
+      <rect x="278" y="564" width="200" height="28" rx="6" fill="#dac9e8"/>
+      <text x="378" y="583" text-anchor="middle">Deferred Tool Definitions</text>
+      <text x="490" y="583" font-size="11" font-style="italic" fill="#ece1f0">Full schemas loaded only when needed</text>
+    </g>
+  </g>
+
+  <!-- bottom legend inside box -->
+  <text x="260" y="630" font-size="11.5" fill="#222">
+    Loaded Time: (1) (2) (3) at start up → (4) accumulate per turn → (5) added during execution → (6) on demand via Tool Search
+  </text>
+
+  <!-- =============== Right side: Claude + outputs =============== -->
+  <!-- Claude Model burst -->
+  <g transform="translate(1050, 130)">
+    <g>
+      <!-- starburst rays -->
+      <g stroke="#e8723b" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-46" x2="0" y2="-26"/>
+        <line x1="0" y1="46" x2="0" y2="26"/>
+        <line x1="-46" y1="0" x2="-26" y2="0"/>
+        <line x1="46" y1="0" x2="26" y2="0"/>
+        <line x1="-33" y1="-33" x2="-19" y2="-19"/>
+        <line x1="33" y1="33" x2="19" y2="19"/>
+        <line x1="-33" y1="33" x2="-19" y2="19"/>
+        <line x1="33" y1="-33" x2="19" y2="-19"/>
+      </g>
+      <circle r="22" fill="url(#claudeGlow)"/>
+    </g>
+    <text x="0" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Claude</text>
+    <text x="0" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Model</text>
+  </g>
+
+  <!-- Reads all arrow: from context window (right edge) -> Claude -->
+  <line x1="900" y1="170" x2="1010" y2="135" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="945" y="155" font-size="13" fill="#444" font-style="italic">Reads all</text>
+
+  <!-- Generate label + arrow from Claude down -->
+  <text x="1050" y="240" text-anchor="middle" font-size="13" fill="#444" font-style="italic">Generate</text>
+  <line x1="1050" y1="252" x2="1050" y2="290" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Output dashed group -->
+  <rect x="970" y="300" width="170" height="320" rx="14" fill="#fafbff" stroke="#9aa1c4" stroke-width="1.6" stroke-dasharray="6 4"/>
+
+  <!-- Text Response -->
+  <g transform="translate(985, 320)">
+    <rect width="140" height="60" rx="10" fill="#eaf1ff" stroke="#7989b0"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#222">Text</text>
+    <text x="20" y="52" font-size="14" font-weight="700" fill="#222">Response</text>
+    <!-- icon: speech bubble -->
+    <g transform="translate(108, 18)" fill="none" stroke="#222" stroke-width="1.6">
+      <path d="M0,4 q0,-4 4,-4 h16 q4,0 4,4 v12 q0,4 -4,4 h-10 l-6,5 v-5 h-0 q-4,0 -4,-4 z"/>
+    </g>
+  </g>
+  <!-- arrow back into context (1) area -->
+  <line x1="985" y1="350" x2="900" y2="350" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool Calls -->
+  <g transform="translate(985, 410)">
+    <rect width="140" height="60" rx="10" fill="#eaf1ff" stroke="#7989b0"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#222">Tool</text>
+    <text x="20" y="52" font-size="14" font-weight="700" fill="#222">Calls</text>
+    <!-- icon: wrench -->
+    <g transform="translate(110, 22)" fill="none" stroke="#222" stroke-width="1.6">
+      <path d="M2,18 l10,-10 m-3,-3 a6,6 0 1 1 6,6 l4,4"/>
+    </g>
+  </g>
+  <line x1="985" y1="440" x2="900" y2="475" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool Search -->
+  <g transform="translate(985, 510)">
+    <rect width="140" height="60" rx="10" fill="#eaf1ff" stroke="#7989b0"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#222">Tool</text>
+    <text x="20" y="52" font-size="14" font-weight="700" fill="#222">Search</text>
+    <!-- icon: magnifier -->
+    <g transform="translate(110, 22)" fill="none" stroke="#222" stroke-width="1.6">
+      <circle cx="6" cy="6" r="6"/>
+      <line x1="11" y1="11" x2="18" y2="18"/>
+    </g>
+  </g>
+  <line x1="985" y1="540" x2="900" y2="565" stroke="#7a7a7a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- =============== footer caption =============== -->
+  <text x="600" y="745" text-anchor="middle" font-size="12" fill="#777" font-style="italic">
+    Context Window architecture — six layers, distinct loading times and mutability profiles
+  </text>
+</svg>
